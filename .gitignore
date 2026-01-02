@@ -1,0 +1,44 @@
+# ===========================================
+# SECURITTY: CRITICAL SECRETS AND CREDENTIALS
+# ===========================================
+# Contains AWS keys and sensitive environment variables
+.env
+
+# SSH private keys for server access
+*.pem
+
+# Terraform state files that contain plain-text sensitive data about infrastructure
+*.tfstate
+*.tfstate.backup
+
+# ==========================================
+# INFRASTRUCTURE: TERRAFORM METADATA
+# ==========================================
+# Local directory containing downloaded providers and plugins
+.terraform/
+.aws/
+
+# ==========================================
+# DEVELOPMENT: PYTHON JUNK
+# ==========================================
+# Compiled Python files (bytecode) that are machine-specific
+__pycache__/
+*.pyc
+
+# Local Virtual Environment (libraries should be installed via requirements.txt)
+.venv/
+
+# ==========================================
+# SYSTEM & OS NOISE
+# ==========================================
+# MacOS specific folder metadata
+.DS_Store
+
+# Windows specific folder metadata
+Thumbs.db
+
+# Ignore local test images
+*.jpg
+*.png
+*.jpeg
+processed_*.jpg
