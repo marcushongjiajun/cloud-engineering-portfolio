@@ -47,15 +47,10 @@ def process_image_from_s3(bucket_name, object_key, output_bucket):
                 os.remove(f)
 
 if __name__ == "__main__":
-    SOURCE_BUCKET = 'mhjj-upload-test' 
-    DEST_BUCKET = 'mhjj-processed-test'
-    FILE_TO_TEST = 'test.jpg'
-    """
     # For testing, we use environmental variables (Best Practice)
     SOURCE_BUCKET = os.environ.get('UPLOAD_BUCKET', 'your-unique-upload-bucket')
     DEST_BUCKET = os.environ.get('PROCESSED_BUCKET', 'your-unique-processed-bucket')
-    FILE_TO_TEST = 'test.jpg' 
-    """
+    FILE_TO_TEST = 'test.jpg'
  
 
     process_image_from_s3(SOURCE_BUCKET, FILE_TO_TEST, DEST_BUCKET)
